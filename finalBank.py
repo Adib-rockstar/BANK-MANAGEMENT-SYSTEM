@@ -22,14 +22,13 @@ def signup():
     mobilelen = len(mobile)
     flag = '1'
     while (flag == '1'):
-        for a in mobile:
-            if (mobile.isnumeric()):       #ord function is use to get the ascii value
-                flag = '2'
-            else:
-                print("Sir, you can only enter digits in mobile number.\nPlease try again!")
-                time.sleep(0.5)
-                mobile = input("Please enter your mobile number :- ")
-                mobilelen = len(mobile)
+        if (mobile.isnumeric()):       #ord function is use to get the ascii value
+            flag = '2'
+        else:
+            print("Sir, you can only enter digits in mobile number.\nPlease try again!")
+            time.sleep(0.5)
+            mobile = input("Please enter your mobile number :- ")
+            mobilelen = len(mobile)
 
     while (mobilelen != 10 ):
         print("Please enter proper mobile number.")
@@ -114,14 +113,13 @@ def login():
     mobilelen = len(mobile)
     flag = '1'
     while (flag == '1'):
-        for a in mobile:
-            if (mobile.isnumeric()):       #ord function is use to get the ascii value
-                flag = '2'
-            else:
-                print("Sir, you can only enter digits in mobile number.\nPlease try again!")
-                time.sleep(0.5)
-                mobile = input("Please enter your mobile number :- ")
-                mobilelen = len(mobile)
+        if (mobile.isnumeric()):       #ord function is use to get the ascii value
+            flag = '2'
+        else:
+            print("Sir, you can only enter digits in mobile number.\nPlease try again!")
+            time.sleep(0.5)
+            mobile = input("Please enter your mobile number :- ")
+            mobilelen = len(mobile)
 
     while (mobilelen != 10 ):
         print("Please enter proper mobile number.")
@@ -259,8 +257,8 @@ def login():
                     test.close()
                     test = open(mob,'w')
                     finaldata = passline.replace(str(passwordold),str(newpass))
-                    print (finaldata)
                     test.write(finaldata)
+                    test.close()
                     print ("Password successfully Changed.\You will be now redirected to login page.")
                     string="Redirecting....."
                     for char in string:
@@ -296,14 +294,13 @@ def login():
                         mobilelen = len(mobile)
                         flag = '1'
                         while (flag == '1'):
-                            for a in mobile:
-                                if (mobile.isnumeric()):       #ord function is use to get the ascii value
-                                    flag = '2'
-                                else:
-                                    print("Sir, you can only enter digits in mobile number.\nPlease try again!")
-                                    time.sleep(0.5)
-                                    mobile = input("Please enter your mobile number :- ")
-                                    mobilelen = len(mobile)
+                            if (mobile.isnumeric()):       #ord function is use to get the ascii value
+                                flag = '2'
+                            else:
+                                print("Sir, you can only enter digits in mobile number.\nPlease try again!")
+                                time.sleep(0.5)
+                                mobile = input("Please enter your mobile number :- ")
+                                mobilelen = len(mobile)
 
                         while (mobilelen != 10 ):
                             print("Please enter proper mobile number.")
@@ -340,9 +337,9 @@ def login():
                                 test.close()
                                 test = open(mob,'w')
                                 finaldata = passline.replace(str(passwordold),str(password))
-                                print (finaldata)
                                 test.write(finaldata)
-                                print ("Password successfully Changed.\You will be now redirected to login page.")
+                                test.close()
+                                print ("Password successfully Changed.\nYou will be now redirected to login page.")
                                 passcount = 0
                                 string="Redirecting....."
                                 for char in string:
