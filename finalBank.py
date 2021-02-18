@@ -4,7 +4,7 @@ from os.path import exists
 import time     #used to sleep the script file for s=certain seconds
 import os       #used to clear powershell in python
 import sys      #used for stdout (i dont have a great idea about this topic)
-import getpass_ak       #module used to display astrik in password
+import getpass_ak       #module used to display astrik in password,download this module from 
 passcount = 0
 
 def home(op):
